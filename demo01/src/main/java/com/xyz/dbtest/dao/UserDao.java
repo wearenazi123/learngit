@@ -1,7 +1,6 @@
 package com.xyz.dbtest.dao;
 
 
-
 import com.xyz.dbtest.entity.User;
 import org.apache.ibatis.annotations.*;
 
@@ -14,9 +13,11 @@ public interface UserDao {
             @Result(property = "name", column = "name"),
             @Result(property = "age", column = "age")
     })
-    @Select("SELECT * FROM User WHERE age = #{age}") //3
+    @Select("SELECT * FROM User WHERE age = #{age}")
+        //3
     List<User> get(int age);
 
-    @Insert("INSERT INTO User(name, age) VALUES (#{name}, #{age})") //3
+    @Insert("INSERT INTO User(name, age) VALUES (#{name}, #{age})")
+        //3
     void insert(User user);
 }

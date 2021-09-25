@@ -21,7 +21,7 @@ public class UserController {
         return userService.showDao(age);
     }
 
-    @RequestMapping(value="/insert")
+    @RequestMapping(value = "/insert")
     public String insert(String name, int age) {
         return userService.insert(name, age);
     }

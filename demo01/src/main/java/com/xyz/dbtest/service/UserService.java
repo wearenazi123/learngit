@@ -5,6 +5,7 @@ import com.xyz.dbtest.dao.UserDao;
 import com.xyz.dbtest.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service //声明成一个spring bean
@@ -26,6 +27,6 @@ public class UserService {
         user.setName(name);
         user.setAge(age);
         userDao.insert(user);
-        return "Insert ( \""+name+"\", age"+age+") OK!";
+        return "Insert ( \"" + name + "\", age" + age + ") OK!";
     }
 }
